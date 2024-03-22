@@ -149,11 +149,26 @@ const sayHello = ()=>{
     console.log("hey")
 }
 
-const add = (a,b)=>{
-    console.log(a+b)
-}
+// const add = (a,b)=>{
+//     console.log(a+b)
+// }
 
 const add3 = (a,bt)=> console.log(a+bt);
 
+
+// High Order functions and callback
+
+function addd(a,b,cb){
+    let result = a + b;
+    cb(result)
+}
+addd(20,20,function(value){
+    console.log(value)
+})
+
+addd(2,2,(value)=> console.log(value))
+
+
+//Arrays 
 
 
