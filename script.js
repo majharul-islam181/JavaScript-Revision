@@ -118,3 +118,27 @@ switch(operator){
     break
     default: console.log("Wrong input")
 }
+
+//Logical Operators
+//AND &&
+// OR ||
+//NOT !=
+
+//Loops
+
+//************* Functions ****************
+function add(n,n1){
+    return n+n1;
+}
+console.log(add(2,2)) //4
+
+//spread operator
+function addNumber01(...number){
+    let ans = 0 ;
+    for(let i=0; i<number.length; i++){
+        ans = ans + number[i]
+    }
+    return ans
+}
+
+console.log(addNumber01(1,2,3,4,5,6,7,8,9))
