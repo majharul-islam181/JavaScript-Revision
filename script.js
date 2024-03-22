@@ -170,5 +170,11 @@ addd(2,2,(value)=> console.log(value))
 
 
 //Arrays 
+const Student = ['may','maya','rohi']
+const marks = [2,3,4,56,6,6,66]
+const allType = [1,true,"test"]
 
+Student.push('new one')
+Student.pop();
+console.log(allType.indexOf(true))
 
