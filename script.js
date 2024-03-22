@@ -142,3 +142,18 @@ function addNumber01(...number){
 }
 
 console.log(addNumber01(1,2,3,4,5,6,7,8,9))
+
+// ************* Arrow Functions ****************
+
+const sayHello = ()=>{
+    console.log("hey")
+}
+
+const add = (a,b)=>{
+    console.log(a+b)
+}
+
+const add3 = (a,bt)=> console.log(a+bt);
+
+
+
