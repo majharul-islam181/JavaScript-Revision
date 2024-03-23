@@ -178,3 +178,103 @@ Student.push('new one')
 Student.pop();
 console.log(allType.indexOf(true))
 
+
+//Array high order functions
+
+
+
+
+
+// DOM - Document Object Model
+/*
+<nav class = "block">
+<p class="paragraph">Welcome to my website</p>
+</nav>
+
+<div class= "block">
+  <h4 id="paraId"> Hello there, i am here for you. </h4>
+</div>
+
+<script>
+
+//query selector by // this will select first (tag,id,class)
+1, tag name
+2, id #
+3, class .
+
+//using tag
+const body = document.querySelector('body')
+console.log(body.innerHTML)
+
+//using id
+const body1 = document.querySelector('#paraId')
+console.log(body1.innerHTML)
+
+//using class
+const body2 = document.querySelector('.block')
+console.log(body2.innerHTML)
+
+
+// Document.getElementById
+
+<div>
+  <h1 id: "name"> majharul Islam </h1>
+</div>
+
+//css file
+.red-color{
+  color: red-color;
+}
+
+const nameElement = document.getElementById("name")
+nameElement.innterText = "majharul dd" //can be changed
+innterText.classList.add("red-color") //classList => css add korar jonno // without html code 
+
+//remove css also from inner html
+nameElement.classList.remove("red-color")
+
+
+
+
+
+
+
+
+
+
+</script>
+
+*/
+
+
+// API calling
+
+const button = document.getElementById('searchBtn')
+const input = document.getElementById('cityInput')
+const cityName = document.getElementById('city-Name')
+const cityTime = document.getElementById('city-Time')
+const cityTep = document.getElementById('city-Tep')
+
+async function getData(cityName1){
+ const promise = await fetch(
+    `http://api.weatherapi.com/v1/current.json?key=47aa6ab12e27427987c150845242303&q={cityName1}&aqi=yes`
+  );
+  return await promise.json()
+}
+button.addEventListener("click", async()=>{
+  const value = input.value;
+ const result = await getData(value)
+ cityName.innerText= `${result.location.name}`
+  
+
+})
+
+
+
+
+
+
+
+
+
+
